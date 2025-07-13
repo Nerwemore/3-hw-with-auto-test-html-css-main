@@ -9,6 +9,7 @@
     margin: 0 auto;
     width: 100%;
     /* 📍 Максимальная ширина для контейнера */
+    max-width: 1440px;
 }
 
 body {
@@ -32,14 +33,22 @@ header span {
     padding: 60px 0;
     min-height: 100vh;
     /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
 
 .main-section .wrapper {
     /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 1024px;
 }
 
 .text-wrapper {
     /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
+    max-width: 425px;
 }
 
 .main-title {
@@ -64,6 +73,9 @@ header span {
 
 .about-section .wrapper {
     /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
 }
 
 select {
@@ -82,11 +94,15 @@ select {
 select:hover,
 .text-field:hover {
     /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
+    border-color: #2965F1;
 }
 
 
 .info-wrapper {
     /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
+    display: flex;
+    flex-wrap: nowrap;
+    
 }
 
 .section-title {
@@ -103,6 +119,9 @@ select:hover,
 .frameworks-list,
 .books-list {
     /* 📍 Свойства flexbox для отступов между элементами в списках */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .frameworks-list {
@@ -114,16 +133,27 @@ select:hover,
 
 .skills-block {
     /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
+   display: flex;
+   flex-direction: column-reverse;
+   
+    
 }
 
 .skills {
     /* 📍 Свойства flexbox для расположения элементов с классом .label */
+    display: flex;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .books-list {
     font-weight: 400;
     font-size: 16px;
     padding-left: 20px;
+    display: flex;
+    min-width: 50%;
 }
 
 .label {
@@ -160,6 +190,9 @@ form {
 
 .btn:hover {
     /* 📍 Стили для кнопки при наведении курсора */
+    background-color: #2965F1E5;
+    cursor: pointer;
+    color: #fff
 }
 
 .line {
@@ -171,7 +204,7 @@ table {
     border-collapse: collapse;
     font-weight: 400;
     font-size: 14px;
-    margin: 0 auto;
+    margin: 60px 570px 0px 570px ;
 }
 
 th, td {
@@ -182,6 +215,10 @@ footer {
     background-color: rgba(163, 167, 255, 0.3);
     padding: 26px 0;
     /* 📍 Свойство для расположения ссылки горизонтально по центру */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+   
 }
 
 .footer-link {
@@ -193,4 +230,6 @@ footer {
 
 .footer-link:hover {
     /* 📍 Стили для ссылки при наведении курсора */
+    display: flex;
+    text-decoration: underline;
 }
